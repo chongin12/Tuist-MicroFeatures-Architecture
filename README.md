@@ -18,7 +18,7 @@ Template of MicroFeatures Architecture with Tuist & SwiftUI
 4. Add module name to `Workspace.swift`
     - `private let modules: [String] = ["MyApp", "MyFeature1", "CoreFeature"]`
 5. Add dependencies in `{Module Name}/Project.swift`
-    - `let project = Project.product(name: "MyApp", platform: .iOS, additionalDependency: ["MyFeature1"], additionalInterfaceDependency: [])`
+    - `let project = Project.product(name: "MyApp", platform: .iOS, additionalDependency: ["MyFeature1"])`
     - `let project = Project.product(name: "MyFeature1", platform: .iOS, additionalDependency: ["CoreFeature"], additionalInterfaceDependency: [/*"MyFeature2"*/])`
     - `let project = Project.foundation(name: "CoreFeature", platform: .iOS, additionalDependency: [], additionalInterfaceDependency: [])`
     - If the module uses core data, use `Project.coreDataFoundation` : `let project = Project.coreDataFoundation(name: "FeatureWithCoreData", platform: .iOS, additionalDependency: [], additionalInterfaceDependency: [], coreDataModels: ["ModelName"])`
