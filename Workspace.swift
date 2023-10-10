@@ -1,14 +1,9 @@
 import ProjectDescription
-import ProjectDescriptionHelpers
+import EnvironmentPlugin
 
-private let modules: [String] = [
-//    "Module1",
-//    "Module2",
-]
-
-private let projects: [Path] = modules.map { "Projects/\($0)" }
-
-private let workspace = Workspace(
-    name: "\(projectName)",
-    projects: projects
+let workspace = Workspace(
+    name: env.name,
+    projects: [
+        "Projects/App"
+    ]
 )
